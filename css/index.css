@@ -1,0 +1,44 @@
+.logo{
+    border: 5px solid white;
+    background-color: black;
+    height: 68px;
+    opacity: 0.5;
+}
+body,html{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100%;
+    position: relative;
+    
+   background-color: yellow;
+}
+html{
+    height: 100%;
+}
+body{
+    min-height: 100%;
+   
+}
+.fixed{
+    position: fixed;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    
+}
+.title{
+    position: relative;
+    border: 2px solid white;
+    bottom: 0;
+    height: 21px;
+    opacity: 0.5;
+    background-color: black;
+}
+.text{
+    display: inline-block;
+    float: left;
+    position: relative;
+    
+}

@@ -1,44 +1,102 @@
-.logo{
-    border: 5px solid white;
-    background-color: black;
-    height: 68px;
-    opacity: 0.5;
+html{
+    height: 100%;
+}
+body{
+   
+    min-height: 100%;
+   
+   
+   
+   background-color: black;
 }
 body,html{
     margin: 0;
     padding: 0;
 }
 .container{
+    z-index: 2;
+    padding: 5px;
+    box-sizing: border-box;
     width: 100%;
-    position: relative;
-    
-   background-color: yellow;
+    position: absolute;
 }
-html{
-    height: 100%;
+.border{
+    border: 5px solid white;
+    box-sizing: border-box;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
 }
-body{
-    min-height: 100%;
-   
+#home img{
+    width: 100%;
 }
-.fixed{
+.header{
+    z-index: 100;
+    background-color:rgba(0,0,0,0.5);
+    box-sizing: border-box;
+    border:5px solid rgba(255,255,255,1);
+    top:0;left: 0;
+    position: fixed;
+    width: 100%;
+    border-bottom: 5px solid white;
+    height: 160px;
+}
+.header img{
+    margin: 30px;
+}
+.footer{
     position: fixed;
     bottom: 0;
     height: 100px;
+    box-sizing: border-box;
     width: 100%;
-    
-}
-.title{
-    position: relative;
-    border: 2px solid white;
     bottom: 0;
-    height: 21px;
-    opacity: 0.5;
-    background-color: black;
+    border: 5px solid white;
+    box-sizing: border-box;
+    left: 0;
+    z-index: 100;
 }
-.text{
-    display: inline-block;
-    float: left;
+.footer .line{
     position: relative;
+    width: 100%;
+    height: 42.5px;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.5);
     
+}
+.footer .line .title{
+    box-sizing: border-box;
+    width: 20%;
+    float: left;
+    line-height: 42.5px;
+    text-align: center;
+}
+.footer>.line .active>a{
+    background-color: white;
+    color: black;
+}
+.title a{
+    text-decoration: none;
+    display: block;
+    color:white;
+    height: 42.5px;
+    font-size: 12px;
+    border-right: 5px solid white; 
+}
+.title:last-child a{
+    border-right: 0;
+}
+.footer hr{
+    margin: 0;
+    padding: 0;
+    border: 2.5px solid white;
+}
+.footer p{
+    line-height: 42.5px;
+    text-align: center;
+    color:white;
+    padding: 0;
+    font-size: 0.3rem;
+    margin: 0 auto;
 }

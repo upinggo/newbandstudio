@@ -38,7 +38,7 @@ var mySwiper = new Swiper ('.swiper-container', {
     var self=this;
     
     for(let i=0;i<title.length;i++){
-        title[i].onclick=function(){
+        title[i].onclick=function() {
             if(this.classList.length==3&&this.parentNode.hasChildNodes('active')){
                 console.log(this)
             }
@@ -62,6 +62,8 @@ var mySwiper = new Swiper ('.swiper-container', {
         
         }
         
+        
     }
 }
+
 

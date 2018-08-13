@@ -27,11 +27,9 @@ var mySwiper = new Swiper ('.swiper-container', {
       prevEl: '.swiper-button-prev',
     },
     
-    // 如果需要滚动条
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-  })  
+   
+  })
+  
 
 
     var title=this.document.getElementsByClassName('title');

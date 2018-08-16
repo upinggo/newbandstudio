@@ -1,15 +1,12 @@
-// window.onload = function(){
-//     var w=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-//     var h=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-//     document.getElementById("containerbox").style.width = w+"px";
-//     document.getElementById("containerbox").style.height = h+"px";
-//     }
-//     window.onresize = function(){
-//         var w=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-//         var h=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-//         document.getElementById("containerbox").style.width = w+"px";
-//         document.getElementById("containerbox").style.height = h+"px";
-//         }
+// import {fetch} from 'whatwg-fetch'; ajax fetch方法！
+var common=new common();
+var url=common.staticurl+common.api.banner;
+
+fetch(url,{
+    method: 'GET',
+    
+}).then(e=>e.json()).then(e=>console.log(e))
+
 window.onload=function(){
 // swiper
 var mySwiper = new Swiper ('.swiper-container', {
@@ -62,6 +59,9 @@ var mySwiper = new Swiper ('.swiper-container', {
         
         
     }
+    document.addEventListener('mousewheel',function(e){
+        console.log(e)
+    },false)
 }
 
 

@@ -1,7 +1,7 @@
 // import {fetch} from 'whatwg-fetch'; ajax fetch方法！
 var common=new common();
 var url=common.staticurl+common.api.banner;
-
+    
 fetch(url,{
     method: 'GET',
     

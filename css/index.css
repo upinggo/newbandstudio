@@ -15,27 +15,45 @@ body,html{
 }
 .container{
     z-index: 2;
-    padding: 5px;
     box-sizing: border-box;
     width: 100%;
+    height: 100vh;
+    border: 5px solid white;
     position: absolute;
+    overflow: hidden;
+
 }
-.border{
+/* .border{
     border: 5px solid white;
     box-sizing: border-box;
     top: 0;
     bottom: 0;
     width: 100%;
     position: fixed;
+} */
+
+#home{
+           position: relative;
 }
 
 
 
-
-
 @media screen and (min-width: 1010px) {
+       #home .swiper-pagination{
+           position: fixed;
+           bottom:135px;
+       }
+       
+       #home .swiper-button-prev,#home .swiper-button-next{
+           position: fixed;
+           opacity: 0.5;
+           bottom: 170px;
+       }
+       #home .swiper-button-prev:hover,#home .swiper-button-next:hover{
+        opacity: 1;
+    }
     #home img{
-        height: 100vh;
+        
         width: 100vw;
     }
     .header{
@@ -110,5 +128,5 @@ body,html{
     }
 }
 @media screen and (max-width:1010px){
-    
+
 }

@@ -41,7 +41,7 @@ body,html{
 @media screen and (min-width: 1010px) {
        #home .swiper-pagination{
            position: fixed;
-           bottom:135px;
+          
        }
        
        #home .swiper-button-prev,#home .swiper-button-next{

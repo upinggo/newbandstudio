@@ -128,5 +128,21 @@ window.onload=function(){
     }
     
 }
+$(document).ready(function(){
+    
+    var deg=0;
+    $("#mobile_icon").click(function(){
+        $("#mobile_nav .title a").css('line-height',($('.container').height()-200)/5+'px');
+        if(deg/90%2==0){
+            $('#mobile_nav').show()
+        }else{
+            $('#mobile_nav').hide()
+        }
+        deg+=90;
+        this.style.transform="rotate("+deg+"deg)";
+        
+    })
+    
+})
 
 

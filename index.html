@@ -7,13 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="lib/swiper-4.3.5/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
+    
     <title>NewBand Studio</title>
 </head>
 
 <body>
     <div class="header">
             <img src="img/nb_logo.png" alt="NewbandLOGO">
+            <i class="fa fa-align-justify fa-3x" id="mobile_icon"></i>
     </div>
+    <nav id="mobile_nav">
+        <div class="home title active"><a  href="#">主页 HOME</a></div>
+        <div class="aboutus title"><a href="#aboutus">关于我们 ABOUT US</a></div>
+        <div class="service title"><a href="#service">服务 SERVICES</a></div>
+        <div class="equipment title"><a href="#client">设备 EQUIPMENT</a></div>
+        <div class="contactus title"><a href="#contactus">联系我们 CONTACT US</a></div>
+    </nav>
+
     <div id="container" class="container">
         <div class="home" id="home">
                 <div class="swiper-container">
@@ -38,20 +49,14 @@
     </div>
     
     <div class="footer">
-            <div class="line">
-                    <div class="home title active"><a  href="#">主页 HOME</a></div>
-                    <div class="aboutus title"><a href="#aboutus">关于我们 ABOUT US</a></div>
-                    <div class="service title"><a href="#service">服务 SERVICES</a></div>
-                    <div class="equipment title"><a href="#client">设备 EQUIPMENT</a></div>
-                    <div class="contactus title"><a href="#contactus">联系我们 CONTACT US</a></div>
-            </div>
-            <hr>
+            
             <div class="line">
                 <p>版权所有 © 2018 上海纽班文化发展有限公司 沪ICP备<span>14050748</span></p>
             </div>
             
         </div>
     <script src="lib/swiper-4.3.5/dist/js/swiper.min.js"></script>
+    <script src="lib/jquery-3.3.1.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/index.js"></script>
 </body>

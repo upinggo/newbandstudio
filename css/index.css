@@ -23,22 +23,63 @@ body,html{
     overflow: hidden;
 
 }
-/* .border{
-    border: 5px solid white;
-    box-sizing: border-box;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    position: fixed;
-} */
-
 #home{
            position: relative;
 }
 
 
 
+/* 导航通用 */
+nav .active>a,nav a:hover{
+    background-color: white;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (min-width: 1010px) {
+    /* 导航栏 */
+    nav{
+        position: absolute;
+        bottom:50px;
+        box-sizing: border-box;
+        height: 50px;
+        width: 100%;
+        display: block;
+        border: 5px solid white;
+        border-bottom: 0px;
+        z-index: 1000;
+    }
+    .title{
+        box-sizing: border-box;
+        width: 20%;
+        float: left;
+        line-height: 45px;
+        text-align: center;
+    }
+    .title a{
+        text-decoration: none;
+        display: block;
+        color:white;
+        height: 45px;
+        font-size: 16px;
+        font-weight: 800;
+        border-right: 5px solid white; 
+    }
+   
+    .header i{
+        display: none;
+    }
        #home .swiper-pagination{
            position: fixed;
           
@@ -73,7 +114,7 @@ body,html{
     .footer{
         position: fixed;
         bottom: 0;
-        height: 100px;
+        height: 50px;
         box-sizing: border-box;
         width: 100%;
         bottom: 0;
@@ -85,41 +126,14 @@ body,html{
     .footer .line{
         position: relative;
         width: 100%;
-        height: 42.5px;
+        height: 40px;
         box-sizing: border-box;
         background-color: rgba(0,0,0,0.5);
         
     }
-    .footer .line .title{
-        box-sizing: border-box;
-        width: 20%;
-        float: left;
-        line-height: 42.5px;
-        text-align: center;
-    }
-    .footer>.line .active>a{
-        background-color: white;
-        color: black;
-    }
-    .title a{
-        text-decoration: none;
-        display: block;
-        color:white;
-        height: 42.5px;
-        font-size: 16px;
-        font-weight: 800;
-        border-right: 5px solid white; 
-    }
-    .title:last-child a{
-        border-right: 0;
-    }
-    .footer hr{
-        margin: 0;
-        padding: 0;
-        border: 2.5px solid white;
-    }
+  
     .footer p{
-        line-height: 42.5px;
+        line-height: 40px;
         text-align: center;
         color:white;
         padding: 0;
@@ -128,5 +142,99 @@ body,html{
     }
 }
 @media screen and (max-width:1010px){
+   
+    
+    nav{
+        display: none;
+        position: absolute;
+        width: 100%;
+        box-sizing: border-box;
+        padding:160px 0 50px; 
+        height: 100%;
+        z-index: 5;
+    }
+    .title{
+        height: 20%;
+        box-sizing: border-box;
+        text-align: center;
+        vertical-align: middle;
+    }
+    .title a{
+        text-decoration: none;
+        color:white;
+        background-color:rgba(0,0,0,0.5);
+        display: block;
+        height: 100%;
+        box-sizing: border-box;
+        border: 5px solid white;
+        border-top:0;
+    }
+    .title:last-child a{
+        border-bottom:0;
+    }
+    .header{
+        z-index: 100;
+        background-color:rgba(0,0,0,0.5);
+        box-sizing: border-box;
+        border:5px solid rgba(255,255,255,1);
+        top:0;left: 0;
+        position: fixed;
+        width: 100%;
+        border-bottom: 5px solid white;
+        height: 160px;
+    }
+    .header i{
+        color:white;
+        position: absolute;
+        bottom:40px;
+        left: auto;
+        right:40px;
+        cursor: pointer;
+    }
+    #home img{
+        position: relative;
+        margin: 0 auto;
+        display: block;
+        height: 100vh;
+    }
+    .header img{
+        margin: 30px;
+    }
+    #home .swiper-pagination,#home .swiper-button-prev,#home .swiper-button-next{
+        display: none;
+    }
+
+    .footer{
+        position: absolute;
+        bottom: 0;
+        height: 50px;
+        box-sizing: border-box;
+        width: 100%;
+        bottom: 0;
+        border: 5px solid white;
+        box-sizing: border-box;
+        left: 0;
+        z-index: 100;
+    }
+    
+    .footer .line{
+        position: relative;
+        width: 100%;
+        height: 40px;
+        box-sizing: border-box;
+        background-color: rgba(0,0,0,0.5);
+        
+    }
+   
+    
+    
+    .footer p{
+        line-height: 40px;
+        text-align: center;
+        color:white;
+        padding: 0;
+        font-size: 0.3rem;
+        margin: 0 auto;
+    }
 
 }

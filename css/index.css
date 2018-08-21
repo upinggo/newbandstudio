@@ -49,6 +49,9 @@ nav .active>a,nav a:hover{
 
 @media screen and (min-width: 1010px) {
     /* 导航栏 */
+    #mobile_icon{
+        display: none;
+    }
     nav{
         position: absolute;
         bottom:50px;
@@ -68,6 +71,7 @@ nav .active>a,nav a:hover{
         text-align: center;
     }
     .title a{
+        background-color: rgba(0,0,0,0.5);
         text-decoration: none;
         display: block;
         color:white;
@@ -75,6 +79,9 @@ nav .active>a,nav a:hover{
         font-size: 16px;
         font-weight: 800;
         border-right: 5px solid white; 
+    }
+    .title:last-child a{
+        border-right:0;
     }
    
     .header i{
@@ -109,7 +116,8 @@ nav .active>a,nav a:hover{
         height: 160px;
     }
     .header img{
-        margin: 30px;
+        margin: 25px 30px;
+        height: 100px;
     }
     .footer{
         position: fixed;
@@ -149,7 +157,7 @@ nav .active>a,nav a:hover{
         position: absolute;
         width: 100%;
         box-sizing: border-box;
-        padding:160px 0 50px; 
+        padding:80px 0 25px; 
         height: 100%;
         z-index: 5;
     }
@@ -181,7 +189,7 @@ nav .active>a,nav a:hover{
         position: fixed;
         width: 100%;
         border-bottom: 5px solid white;
-        height: 160px;
+        height: 80px;
     }
     .header i{
         color:white;
@@ -198,7 +206,12 @@ nav .active>a,nav a:hover{
         height: 100vh;
     }
     .header img{
-        margin: 30px;
+        height: 50px;
+        display: inline-block;
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        
     }
     #home .swiper-pagination,#home .swiper-button-prev,#home .swiper-button-next{
         display: none;
@@ -207,7 +220,7 @@ nav .active>a,nav a:hover{
     .footer{
         position: absolute;
         bottom: 0;
-        height: 50px;
+        height: 30px;
         box-sizing: border-box;
         width: 100%;
         bottom: 0;
@@ -216,11 +229,15 @@ nav .active>a,nav a:hover{
         left: 0;
         z-index: 100;
     }
-    
+    #mobile_icon{
+        right:10px;
+        height: 25px;
+        left: auto;
+    }
     .footer .line{
         position: relative;
         width: 100%;
-        height: 40px;
+        height: 20px;
         box-sizing: border-box;
         background-color: rgba(0,0,0,0.5);
         
@@ -229,11 +246,11 @@ nav .active>a,nav a:hover{
     
     
     .footer p{
-        line-height: 40px;
+        line-height: 20px;
         text-align: center;
         color:white;
         padding: 0;
-        font-size: 0.3rem;
+        font-size: 0.1rem;
         margin: 0 auto;
     }
 

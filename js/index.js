@@ -11,16 +11,18 @@ window.onresize=function(){
     // home.style.top=(bodyheight-homeheight)/2+'px';
     // var container=document.getElementById('container');
     
+    
     var home=document.getElementById('home');
         
-    var homeheight=document.getElementsByTagName('img')[1].offsetHeight;
+    var homeheight=document.getElementsByTagName('img')[2].offsetHeight;
         var bodyheight=document.body.clientHeight;
         home.style.top=(bodyheight-homeheight)/2+'px';  
         var slide=document.getElementsByClassName('swiper-container')[0];
-    
-        slide.style.height=document.getElementsByTagName('img')[1].offsetHeight+'px';
+        
+        slide.style.height=document.getElementsByTagName('img')[2].offsetHeight+'px';
 }
 window.onload=function(){
+    
     fetch(url,{
         method: 'GET',
         
@@ -44,7 +46,7 @@ window.onload=function(){
         }
     ).then(function(e){
        return new Promise(function(resolve,reject){
-           var img=document.getElementsByTagName('img')[1];
+           var img=document.getElementsByTagName('img')[2];
            img.onload=function(){
             resolve(img);
         };
@@ -54,15 +56,18 @@ window.onload=function(){
        })
         
     }).then(function(e){
-        
+       
+        var bodywidth=document.body.clientWidth;
+        var left=(bodywidth-e.offsetWidth)/2;
         var home=document.getElementById('home');
         
         var homeheight=home.offsetHeight;
             var bodyheight=document.body.clientHeight;
             home.style.top=(bodyheight-homeheight)/2+'px';  
             var slide=document.getElementsByClassName('swiper-container')[0];
-        
+        slide.style.left=left+'px';
             slide.style.height=e.offsetHeight+'px';
+            
         
     // swiper
     var mySwiper = new Swiper ('.swiper-container', {

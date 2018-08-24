@@ -218,7 +218,12 @@ nav .active>a,nav a:hover{
         left: 10px;
         
     }
-    #home .swiper-pagination,#home .swiper-button-prev,#home .swiper-button-next{
+    #home .swiper-pagination{
+        display: block;
+        /* left: 500px; */
+    }
+    
+    #home .swiper-button-prev,#home .swiper-button-next{
         display: none;
     }
 

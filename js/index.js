@@ -98,7 +98,7 @@ window.onload=function(){
         
        
       });
-      
+        document.getElementsByClassName("swiper-pagination")[0].style.left=35-left+'px';
         
     });
     var title=this.document.getElementsByClassName('title');

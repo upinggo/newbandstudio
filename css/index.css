@@ -50,6 +50,19 @@ nav .active>a,nav a:hover{
 
 
 @media screen and (min-width: 1010px) {
+    #studio{
+        position: relative;
+        top: 160px;
+    }
+    #studio img{
+        position: absolute;
+        top:100px;
+        width: 50%;
+    }
+    #aboutus{
+        position: absolute;
+        
+    }
     /* 导航栏 */
     #mobile_icon{
         display: none;

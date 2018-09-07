@@ -21,6 +21,7 @@ body,html{
     border: 5px solid white;
     position: absolute;
     overflow: hidden;
+    zoom: 1;
 
 }
 #home{
@@ -28,39 +29,135 @@ body,html{
 }
 
 
-
-/* 导航通用 */
+@media screen and (min-width: 1010px) {
+    .layouts div.r_title img{
+        width: 5vw;
+        position: absolute;
+        top: 150px;
+        right: 0;
+    }
+    .text p{
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 3rem;
+    }
+    div.layouts .whitecontent img{
+        position: absolute;
+    top: auto;
+    bottom: 50px;
+    left: 50px;
+    z-index: 0;
+    width: 5vw;
+    }
+    div.layouts .whitecontent .mixer img{
+        position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    z-index: 0; 
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    }
+    #sign_lsy,#sign_shb{
+        width:200px;
+    }
+    #sign_lsy{
+        position: absolute;
+        display: block;
+        top: -120px;
+        left: 50px;
+        
+    }
+    #sign_shb{
+        position: absolute;
+        display: block;
+        top: -144px;
+        left: 50px;
+    }
+    /* 白色底部 */
+    .whitecontent{
+        padding-bottom: 50px;
+        background-color: white;
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+        padding-top: 50px;
+        /* padding: 0px 1% 0 30%; */
+        color: black;
+        float: left;
+    }
+    
+    .mixer{
+        position: relative;
+        width: 25vw;
+        padding: 0 10px;
+        float: left;
+    }
+    #shb{
+        left: 40vw;
+    }
+    #lsy{
+        left: 40vw;
+    }
+    .layouts{
+        position: relative;
+        padding-top: 150px;
+        overflow: auto;
+    }
+    .text::after{
+        content: "020"; 
+  display: block; 
+  height: 0; 
+  clear: both; 
+  visibility: hidden; 
+    }
+    /* 导航通用 */
 nav .active>a,nav a:hover{
     background-color: white;
     color: black;
-    font-size: 23px;
+    font-size: 16px;
     font-weight: 800;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (min-width: 1010px) {
-    #studio{
+    .text{
+        border: solid white;
+        padding-bottom: 80px;
+        left: 40vw;
+        border-width: 50px 5px 0;
+        color: white;
+        padding-left: 30px;
+        width: 50vw;
         position: relative;
-        top: 160px;
+        float: left;
+        margin-top: 75px;
+        font-family: '微软雅黑';
+        font-size: 1rem;
     }
-    #studio img{
-        position: absolute;
-        top:100px;
-        width: 50%;
+    .text::after{
+        content: "";
+        display: block;
+        visibility: hidden;
+        clear: both;
+    }
+    .text h3{
+
+    }
+    
+    .layouts img{
+        position: fixed;
+    top: 250px;
+    width: 45%;
+    z-index: -5;
+    }
+    .mixer h1{
+        font-weight: 800;
+    }
+    .mixer .detail{
+        padding: 0 2vw 0 0;
+        font-size: 1.2rem;
+        line-height: 2rem;
     }
     #aboutus{
-        position: absolute;
         
     }
     /* 导航栏 */
@@ -154,18 +251,29 @@ nav .active>a,nav a:hover{
         background-color: rgba(0,0,0,0.5);
         
     }
-  
+  .bg_black{
+      height: 200px;
+      background-color: black;
+      clear: both;
+  }
     .footer p{
-        line-height: 40px;
+        line-height: 35px;
         text-align: center;
-        color:white;
+        color: white;
         padding: 0;
+        border-bottom: 5px solid white;
         font-size: 0.3rem;
         margin: 0 auto;
     }
 }
 @media screen and (max-width:1010px){
-   
+   /* 导航通用 */
+nav .active>a,nav a:hover{
+    background-color: white;
+    color: black;
+    font-size: 23px;
+    font-weight: 800;
+}
     
     nav{
         display: none;
@@ -219,7 +327,7 @@ nav .active>a,nav a:hover{
     }
     #home img{
         position: relative;
-        margin: 0 auto;
+        /* margin: 0 auto; */
         display: block;
         height: 100vh;
     }

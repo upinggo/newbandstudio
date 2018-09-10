@@ -14,7 +14,7 @@ body,html{
     padding: 0;
 }
 .container{
-    z-index: 2;
+    
     box-sizing: border-box;
     width: 100%;
     height: 100vh;
@@ -128,17 +128,12 @@ nav .active>a,nav a:hover{
         padding-left: 30px;
         width: 50vw;
         position: relative;
-        float: left;
+        /* float: left; */
         margin-top: 75px;
         font-family: '微软雅黑';
         font-size: 1rem;
     }
-    .text::after{
-        content: "";
-        display: block;
-        visibility: hidden;
-        clear: both;
-    }
+    
     .text h3{
 
     }
@@ -250,6 +245,77 @@ nav .active>a,nav a:hover{
         box-sizing: border-box;
         background-color: rgba(0,0,0,0.5);
         
+    }
+    .container a:hover{
+        color:black;
+        background-color: white;
+    }
+    .container a.first{
+        border-top: 5px solid white;
+    }
+    .container a.last{
+        border-bottom: 5px solid white;
+    }
+    .container a{
+        display: block;
+        border: solid white;
+        margin: 0;
+        left: 40vw;
+        border-width: 2.5px 5px;
+        color: white;
+        width: 50vw;
+        position: relative;
+        /* float: left; */
+        padding:2rem 0 2rem 30px;
+        font-size: 2rem;
+    font-weight: 600;
+    line-height: 2rem;
+    text-decoration: none;
+    }
+    .container .showdetail{
+        display: none;
+        position: relative;
+        border-top: 5px solid black;
+        background-color: white;
+        color:black;
+    }
+    .container .showdetail .textdetail{
+        position: relative;
+        left: 40vw;
+        padding:2rem 0 2rem 30px;
+        font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.6rem;
+    }
+    .showdetail span{
+        position:absolute;
+        cursor: pointer;
+        top: 15px;
+        right: 15px;
+        font-size: 3rem; 
+    }
+    .container .showdetail img{
+        position: absolute;
+    top: auto;
+    bottom: 50px;
+    left: 50px;
+    z-index: 0;
+    width: 10vw;
+    }
+    .container a span.more{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+       right: 30px;
+    }
+    
+    #gallery .minphoto{
+        position: relative;
+        top: 0;
+        padding: 30px 30px 15px 0;
+        width: calc(50% - 30px);
+        display: inline-block;
+        z-index: 0;
     }
   .bg_black{
       height: 200px;

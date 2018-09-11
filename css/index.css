@@ -17,7 +17,7 @@ body,html{
     
     box-sizing: border-box;
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     border: 5px solid white;
     position: absolute;
     overflow: hidden;
@@ -35,6 +35,12 @@ body,html{
         position: fixed;
         top: 155px;
         right: -5px;
+    }
+    .service{
+        height: 100vh;
+    }
+    .gallery{
+        
     }
     .text p{
         font-size: 1.5rem;
@@ -103,7 +109,7 @@ body,html{
     .layouts{
         position: relative;
         padding-top: 150px;
-        overflow: scroll;
+        /* overflow: scroll; */
         overflow-x: hidden;
     }
     .text::after{
@@ -163,7 +169,7 @@ nav .active>a,nav a:hover{
         display: none;
     }
     nav{
-        position: absolute;
+        position: fixed;
         bottom:50px;
         box-sizing: border-box;
         height: 50px;

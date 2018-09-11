@@ -1,7 +1,16 @@
 
+
 window.onload=function(){
+    $(".container").scroll(function(){
+        var scrollTop=$(this)[0].scrollTop;
+        console.log(scrollTop);
+        var oDiv = document.getElementsByClassName('text')[0]
+        var divTop = oDiv.offsetTop - oDiv.scrollHeight; //scrollHeight：内容的高度,不包括margin和border
+        if(scrollTop > divTop) {
+            oDiv.style.backgroundColor = 'blue';
+        }
+    })
     
-   
     var title=this.document.getElementsByClassName('title');
     var self=this;
     
@@ -53,5 +62,6 @@ $(document).ready(function(){
     })
     
 })
+
 
 

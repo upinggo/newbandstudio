@@ -32,9 +32,9 @@ body,html{
 @media screen and (min-width: 1010px) {
     .layouts div.r_title img{
         width: 5vw;
-        position: absolute;
-        top: 150px;
-        right: 0;
+        position: fixed;
+        top: 155px;
+        right: -5px;
     }
     .text p{
         font-size: 1.5rem;
@@ -47,7 +47,7 @@ body,html{
     bottom: 50px;
     left: 50px;
     z-index: 0;
-    width: 5vw;
+    width: 3vw;
     }
     div.layouts .whitecontent .mixer img{
         position: relative;
@@ -95,15 +95,16 @@ body,html{
         float: left;
     }
     #shb{
-        left: 40vw;
+        left: 38vw;
     }
     #lsy{
-        left: 40vw;
+        left: 38vw;
     }
     .layouts{
         position: relative;
         padding-top: 150px;
-        overflow: auto;
+        overflow: scroll;
+        overflow-x: hidden;
     }
     .text::after{
         content: "020"; 
@@ -122,20 +123,22 @@ nav .active>a,nav a:hover{
     .text{
         border: solid white;
         padding-bottom: 80px;
-        left: 40vw;
+        left: 38vw;
         border-width: 50px 5px 0;
         color: white;
         padding-left: 30px;
         width: 50vw;
         position: relative;
         /* float: left; */
-        margin-top: 75px;
+        background-color: rgba(0,0,0,0.5);
+        margin-top: 50px;
         font-family: '微软雅黑';
         font-size: 1rem;
     }
     
-    .text h3{
-
+    #contactus.text{
+        height: 25vw;
+        border-bottom:5px white solid; 
     }
     
     .layouts img{
@@ -149,8 +152,8 @@ nav .active>a,nav a:hover{
     }
     .mixer .detail{
         padding: 0 2vw 0 0;
-        font-size: 1.2rem;
-        line-height: 2rem;
+    font-size: 1rem;
+    line-height: 1.2rem;
     }
     #aboutus{
         
@@ -178,7 +181,7 @@ nav .active>a,nav a:hover{
         text-align: center;
     }
     .title a{
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(0,0,0,0.75);
         text-decoration: none;
         display: block;
         color:white;
@@ -213,7 +216,7 @@ nav .active>a,nav a:hover{
     }
     .header{
         z-index: 100;
-        background-color:rgba(0,0,0,0.5);
+        background-color:rgba(0,0,0,0.75);
         box-sizing: border-box;
         border:5px solid rgba(255,255,255,1);
         top:0;left: 0;
@@ -243,7 +246,7 @@ nav .active>a,nav a:hover{
         width: 100%;
         height: 40px;
         box-sizing: border-box;
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(0,0,0,0.75);
         
     }
     .container a:hover{
@@ -259,8 +262,9 @@ nav .active>a,nav a:hover{
     .container a{
         display: block;
         border: solid white;
+        background-color: rgba(0,0,0,0.75);
         margin: 0;
-        left: 40vw;
+        left: 38vw;
         border-width: 2.5px 5px;
         color: white;
         width: 50vw;
@@ -275,17 +279,23 @@ nav .active>a,nav a:hover{
     .container .showdetail{
         display: none;
         position: relative;
-        border-top: 5px solid black;
+        
         background-color: white;
         color:black;
+    }
+    .showdetail.bordertop{
+        border-top: 5px solid black;
+    }
+    .container .showdetail .textdetail h1{
+        line-height: 1.6rem;
     }
     .container .showdetail .textdetail{
         position: relative;
         left: 40vw;
-        padding:2rem 0 2rem 30px;
+        padding:8rem 0 2rem 30px;
         font-size: 0.8rem;
     font-weight: 600;
-    line-height: 1.6rem;
+    line-height: 1.3rem;
     }
     .showdetail span{
         position:absolute;
@@ -308,7 +318,28 @@ nav .active>a,nav a:hover{
         transform: translateY(-50%);
        right: 30px;
     }
-    
+    #showphoto{
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color:rgba(0,0,0,0.5);
+        display: none;
+    }
+    #showphoto>#showimg{
+        position: relative;
+        
+        width: 50%;
+        margin:0 auto;
+        display: block;
+        z-index: 10;
+    }
+    #gallery.text{
+        padding-bottom: 15px;
+        border-bottom: 5px solid white;
+        margin-bottom: 145px;
+    }
     #gallery .minphoto{
         position: relative;
         top: 0;
@@ -316,14 +347,15 @@ nav .active>a,nav a:hover{
         width: calc(50% - 30px);
         display: inline-block;
         z-index: 0;
+        cursor: pointer;
     }
   .bg_black{
-      height: 200px;
+      height: 150px;
       background-color: black;
       clear: both;
   }
     .footer p{
-        line-height: 35px;
+        line-height: 40px;
         text-align: center;
         color: white;
         padding: 0;

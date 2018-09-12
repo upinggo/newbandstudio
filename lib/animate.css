@@ -1410,6 +1410,21 @@ Copyright (c) 2014 Daniel Eden
     animation-name: fadeInUp;
     /* animation-duration: 2s; */
 }
+.fadeInUp2 {
+	-webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    animation-duration: 2s;
+}
+.fadeInUp3 {
+	-webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    animation-duration: 3s;
+}
+.fadeInUp4 {
+	-webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    animation-duration: 4s;
+}
 
 @-webkit-keyframes fadeInUpBig {
 	0% {

@@ -17,7 +17,7 @@ body,html{
     
     box-sizing: border-box;
     width: 100%;
-    /* height: 100vh; */
+    height: 100vh;
     border: 5px solid white;
     position: absolute;
     overflow: hidden;
@@ -36,11 +36,9 @@ body,html{
         top: 155px;
         right: -5px;
     }
-    .service{
-        height: 100vh;
-    }
+    .service.layouts{
+      }
     .gallery{
-        height: 100vh;
     }
     .text p{
         font-size: 1.5rem;
@@ -109,7 +107,8 @@ body,html{
     .layouts{
         position: relative;
         padding-top: 150px;
-        /* overflow: scroll; */
+        min-height: 100vh;
+        height: auto;
         overflow-x: hidden;
     }
     .text::after{
@@ -126,13 +125,18 @@ nav .active>a,nav a:hover{
     font-size: 16px;
     font-weight: 800;
 }
+.text h1{
+    margin-top: 50px;
+    font-size: 3rem;
+    margin-bottom: 0;
+}
     .text{
         border: solid white;
         padding-bottom: 80px;
         left: 38vw;
         border-width: 50px 5px 0;
         color: white;
-        padding-left: 30px;
+        padding-left: 50px;
         width: 50vw;
         position: relative;
         /* float: left; */
@@ -149,7 +153,7 @@ nav .active>a,nav a:hover{
     
     .layouts img{
         position: fixed;
-    top: 250px;
+        top: 230px;
     width: 45%;
     z-index: -5;
     }
@@ -276,11 +280,11 @@ nav .active>a,nav a:hover{
         width: 50vw;
         position: relative;
         /* float: left; */
-        padding:2rem 0 2rem 30px;
+        padding: 2rem 0 2rem 50px;
         font-size: 2rem;
-    font-weight: 600;
-    line-height: 2rem;
-    text-decoration: none;
+        font-weight: 600;
+        line-height: 2rem;
+        text-decoration: none;  
     }
     .container .showdetail{
         display: none;
@@ -327,10 +331,10 @@ nav .active>a,nav a:hover{
     #showphoto{
         position: fixed;
         top: 0;
-        left: 0;
+        left: 5px;
+        right: 5px;
         bottom: 0;
-        right: 0;
-        background-color:rgba(0,0,0,0.5);
+        background-color:rgba(0,0,0,0.9);
         display: none;
     }
     #showphoto>#showimg{
@@ -342,15 +346,15 @@ nav .active>a,nav a:hover{
         z-index: 10;
     }
     #gallery.text{
-        padding-bottom: 15px;
+        padding-bottom: 50px;
         border-bottom: 5px solid white;
         margin-bottom: 145px;
     }
     #gallery .minphoto{
         position: relative;
         top: 0;
-        padding: 30px 30px 15px 0;
-        width: calc(50% - 30px);
+        padding: 50px 50px 0px 0;
+        width: calc(50% - 50px);
         display: inline-block;
         z-index: 0;
         cursor: pointer;

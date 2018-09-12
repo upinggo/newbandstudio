@@ -66,10 +66,10 @@ $(document).ready(function(){
         if(deg/90%2==0){
             $('#mobile_nav').show();
             console.log(1)
-            mySwiper.autoplay.stop();
+           
         }else{
             $('#mobile_nav').hide();
-            mySwiper.autoplay.start();
+           
         }
         deg+=90;
         this.style.transform="rotate("+deg+"deg)";

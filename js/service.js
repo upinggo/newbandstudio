@@ -1,6 +1,7 @@
 $(document).ready(function(){
     var isrun1,isrun2,isrun3,isrun4=false;
     $(".container a").hide();
+    if(document.documentElement.offsetWidth>1010){
     document.onscroll=function(){
         var scrollTop=document.body.scrollTop+document.documentElement.scrollTop;
         // console.log(!$(".first").next(".showdetail").hasClass("show"),document.documentElement.scrollTop);
@@ -21,6 +22,31 @@ $(document).ready(function(){
             
         }
     }
+}else{
+    $(".text")[0].removeAttribute("style");
+   var th= $(".text")[0].offsetHeight;
+    console.log($(".text")[0].offsetHeight);
+    document.onscroll=function(){
+        var scrollTop=document.body.scrollTop+document.documentElement.scrollTop;
+        // console.log(!$(".first").next(".showdetail").hasClass("show"),document.documentElement.scrollTop);
+        console.log(scrollTop)
+        if(scrollTop > 1&&scrollTop<2&&!isrun1&&!$(".first").next(".showdetail").hasClass("show")) {
+            isrun1=true;
+           $(".first").show().addClass("animated fadeInUp1");
+           
+        }else if(scrollTop >= 2&&scrollTop<3&&!isrun2&&!$(".second").next(".showdetail").hasClass("show")) {
+            isrun2=true;
+            $(".second").show().addClass("animated fadeInUp1");
+        }else if(scrollTop >= 4&&scrollTop<5&&!isrun3&&!$(".third").next(".showdetail").hasClass("show")) {
+            isrun3=true;
+            $(".third").show().addClass("animated fadeInUp1");
+        }else if(scrollTop>=4&&!isrun4&&!$(".last").next(".showdetail").hasClass("show")) {
+            isrun4=true;
+            $(".last").show().addClass("animated fadeInUp1");
+            
+        }
+    }
+}
     $(".container a").click(function(){
         $(this).next(".showdetail").addClass("animated fadeIn");
         $(this).prev().prev("a").css("border-bottom","0");

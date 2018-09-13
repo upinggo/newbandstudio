@@ -21,12 +21,12 @@ $(document).ready(function(){
             showimg.src=this.dataset.src;
             show.style.display='block';
         }
-       
+        if(document.documentElement.offsetWidth>1010){
         if(i>4){
             
             img.style.display="none";
             img.className="minphoto animated fadeInUpBig";
-        }
+        }}
         
         
     }
@@ -42,8 +42,8 @@ $(document).ready(function(){
    }
 );
 
-
-document.onscroll=function(){
+if(document.documentElement.offsetWidth>1010){
+    document.onscroll=function(){
     var scrollTop=document.body.scrollTop+document.documentElement.scrollTop;
     var imgheight=$(".minphoto")[0].offsetHeight/2
     
@@ -62,4 +62,9 @@ document.onscroll=function(){
         }
         console.log(scrollTop,num,imgheight,"imgnum:"+imgnum,shownum)
     }
+}
+else{
+
+}
+
 })

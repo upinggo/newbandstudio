@@ -9,6 +9,15 @@ body{
    
    background-color: black;
 }
+#p_shb{
+    width:25vw;float:left;
+}
+#p_lsy{
+    width: 23vw;float: left;padding-left: 2vw;
+}
+.clear{
+    clear: both;
+}
 body,html{
     margin: 0;
     padding: 0;
@@ -30,6 +39,9 @@ body,html{
 
 
 @media screen and (min-width: 1010px) {
+    #w_lsy{
+        display: none;
+    }
     .layouts div.r_title img{
         width: 5vw;
         position: fixed;
@@ -151,7 +163,7 @@ nav .active>a,nav a:hover{
         border-bottom:5px white solid; 
     }
     
-    .layouts img{
+    .layouts>img{
         position: fixed;
         top: 230px;
     width: 45%;
@@ -261,7 +273,18 @@ nav .active>a,nav a:hover{
     }
     .container a:hover{
         color:black;
+        
         background-color: white;
+    }
+    .container a:hover span.more{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+       right: 30px;
+       background: url(../img/icon-black.png) center no-repeat;
+       background-size: 2rem 2rem;
+    width: 2rem;
+    height: 2rem;
     }
     .container a.first{
         border-top: 5px solid white;
@@ -312,7 +335,11 @@ nav .active>a,nav a:hover{
         cursor: pointer;
         top: 15px;
         right: 15px;
-        font-size: 3rem; 
+        background: url(../img/icon-black.png) center no-repeat;
+        width: 2rem;
+        background-size: 2rem 2rem;
+        height: 2rem;
+        transform: rotate(45deg)
     }
     .container .showdetail img{
         position: absolute;
@@ -327,7 +354,12 @@ nav .active>a,nav a:hover{
         top: 50%;
         transform: translateY(-50%);
        right: 30px;
+       background: url(../img/icon.png) center no-repeat;
+       background-size: 2rem 2rem;
+    width: 2rem;
+    height: 2rem;
     }
+    
     #showphoto{
         position: fixed;
         top: 0;
@@ -339,7 +371,7 @@ nav .active>a,nav a:hover{
     }
     #showphoto>#showimg{
         position: relative;
-        
+        top:25%;
         width: 50%;
         margin:0 auto;
         display: block;
@@ -373,6 +405,13 @@ nav .active>a,nav a:hover{
         font-size: 0.3rem;
         margin: 0 auto;
     }
+    #p_img{
+        display: block;
+
+    }
+    #m_img{
+        display: none;
+    }
 }
 @media screen and (max-width:1010px){
    /* 导航通用 */
@@ -385,12 +424,12 @@ nav .active>a,nav a:hover{
     
     nav{
         display: none;
-        position: absolute;
+        position: fixed;
         width: 100%;
         box-sizing: border-box;
         padding:80px 0 25px; 
         height: 100%;
-        z-index: 5;
+        z-index: 6;
     }
     .title{
         height: 20%;
@@ -404,7 +443,7 @@ nav .active>a,nav a:hover{
     padding-top: 5px;
         text-decoration: none;
         color:white;
-        background-color:rgba(0,0,0,0.5);
+        background-color:rgba(0,0,0,0.75);
         display: block;
         height: 100%;
         box-sizing: border-box;
@@ -416,7 +455,7 @@ nav .active>a,nav a:hover{
     }
     .header{
         z-index: 100;
-        background-color:rgba(0,0,0,0.5);
+        background-color:rgba(0,0,0,0.75);
         box-sizing: border-box;
         border:5px solid rgba(255,255,255,1);
         top:0;left: 0;
@@ -457,7 +496,7 @@ nav .active>a,nav a:hover{
     }
 
     .footer{
-        position: absolute;
+        position: fixed;
         bottom: 0;
         height: 30px;
         box-sizing: border-box;
@@ -478,10 +517,17 @@ nav .active>a,nav a:hover{
         width: 100%;
         height: 20px;
         box-sizing: border-box;
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(0,0,0,1);
         
     }
-   
+   .footer #index.line{
+    position: relative;
+    width: 100%;
+    height: 20px;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,.5);
+    
+}
     
     
     .footer p{
@@ -492,5 +538,175 @@ nav .active>a,nav a:hover{
         font-size: 0.1rem;
         margin: 0 auto;
     }
+    /* aboutus */
+    .layouts{
+        position: relative;
+    min-height: 100vh;
+    height: auto;
+    overflow-x: hidden;
+    }
+    .container.layouts>img{
+        height: 100vh;
+        left: -30%;
+        position: fixed;
+        z-index: -5;
+    } 
+    #p_img{
+        display: none;
+    }
+    #m_img{
+        display: block;
+    }
+    .r_title{
+        position: fixed;
+        width: 100%;
+        height: 48px;
+        bottom:30px;
+        background-color:white;
+        z-index: 5;
 
+    }
+    .r_title>img{
+        position: absolute;
+        bottom:0;
+        height: 40px;
+    }
+    .text{
+        border: solid white;
+        border-width: 0px;
+        color: white;
+        padding-left: 10px;
+        width: 50vw;
+        position: relative;
+        padding-bottom: 40px;
+        /* float: left; */
+        width: 100%;
+        background-color: rgba(0,0,0,0.5);
+        margin-top: 70px;
+        font-family: '微软雅黑';
+        font-size: 1rem;
+    }
+    .text h1 {
+        padding-top: 10px;
+        font-size: 3rem;
+        margin-bottom: 0;
+    }
+    .text p {
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 3rem;
+    }
+#p_lsy{display: none;}
+.whitecontent{
+    background-color: white;
+}
+.mixer {
+    position: relative;
+    width: 100vw;
+    padding: 60px 15px 50px 10px;
+    box-sizing: border-box;
+}
+#sign_shb {
+    position: absolute;
+    display: block;
+    width: 150px;
+    top: -70px;
+}
+#sign_lsy{
+    position: relative;
+    display: block;
+    width: 150px;
+}
+.m_photo {
+    position: relative;
+    width: 150px;
+}
+.bg_black{
+    height: 95px;
+    background-color: black;
+    clear: both;
+}
+#lsy{
+    padding-top:0;
+}
+#w_lsy{
+    display: none;
+    padding-left: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 3rem;
+    margin: 0 0 0.4rem;
+}
+.container a {
+    display: block;
+    border: solid white;
+    background-color: rgba(0,0,0,0.75);
+    margin: 0;
+    box-sizing: border-box;
+    border-width: 2.5px 0px;
+    color: white;
+    width: 100%;
+    position: relative;
+    padding: 2rem 0 2rem 50px;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 2rem;
+    text-decoration: none;
+}
+.container a.first {
+    border-top: 5px solid white;
+}
+.container a.last {
+    border-bottom: 5px solid white;
+}
+.showdetail>img{
+    display: none;
+}
+.container a span.more {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    background: url(../img/icon.png) center no-repeat;
+    background-size: 2rem 2rem;
+    width: 2rem;
+    height: 2rem;
+}
+.container .showdetail {
+    display: none;
+    position: relative;
+    background-color: white;
+    color: black;
+}
+#gallery .minphoto {
+    width: 100%;
+    padding:0 5% 5% 0;
+}
+#gallery .minphoto:first-child{
+    
+    padding-top: 0%;
+}
+#gallery{
+    padding:5% 5%;
+    width: 90%;
+}
+#showphoto {
+    position: fixed;
+    top: 0;
+    left: 5px;
+    right: 5px;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.9);
+    display: none;
+}#showphoto>#showimg {
+    position: relative;
+    top: 25%;
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    z-index: 10;
+}
+#m_foot{
+    height: 50px;
+}
 }

@@ -25,29 +25,60 @@ $(document).ready(function(){
 }else{
     $(".text")[0].removeAttribute("style");
    var th= $(".text")[0].offsetHeight;
-    console.log($(".text")[0].offsetHeight);
+   
+   var bodyh=document.documentElement.offsetHeight;
+   if(bodyh>th){
+       $(".first").show();
+       isrun1=true;
+    var ah=$(".first")[0].offsetHeight;
     document.onscroll=function(){
         var scrollTop=document.body.scrollTop+document.documentElement.scrollTop;
         // console.log(!$(".first").next(".showdetail").hasClass("show"),document.documentElement.scrollTop);
         console.log(scrollTop)
-        if(scrollTop > 1&&scrollTop<2&&!isrun1&&!$(".first").next(".showdetail").hasClass("show")) {
-            isrun1=true;
-           $(".first").show().addClass("animated fadeInUp1");
-           
-        }else if(scrollTop >= 2&&scrollTop<3&&!isrun2&&!$(".second").next(".showdetail").hasClass("show")) {
+         if(scrollTop >= 0&&scrollTop<100&&!isrun2&&!$(".second").next(".showdetail").hasClass("show")) {
             isrun2=true;
             $(".second").show().addClass("animated fadeInUp1");
-        }else if(scrollTop >= 4&&scrollTop<5&&!isrun3&&!$(".third").next(".showdetail").hasClass("show")) {
+        }else if(scrollTop >= 100&&scrollTop<200&&!isrun3&&!$(".third").next(".showdetail").hasClass("show")) {
             isrun3=true;
             $(".third").show().addClass("animated fadeInUp1");
-        }else if(scrollTop>=4&&!isrun4&&!$(".last").next(".showdetail").hasClass("show")) {
+        }else if(scrollTop>=200&&!isrun4&&!$(".last").next(".showdetail").hasClass("show")) {
             isrun4=true;
             $(".last").show().addClass("animated fadeInUp1");
             
         }
     }
+   }else{
+    document.onscroll=function(){
+        var scrollTop=document.body.scrollTop+document.documentElement.scrollTop;
+        // console.log(!$(".first").next(".showdetail").hasClass("show"),document.documentElement.scrollTop);
+        console.log(scrollTop)
+        if(scrollTop > 0&&scrollTop<100&&!isrun1&&!$(".first").next(".showdetail").hasClass("show")) {
+            isrun1=true;
+           $(".first").show().addClass("animated fadeInUp1");
+           
+        }else if(scrollTop >= 100&&scrollTop<200&&!isrun2&&!$(".second").next(".showdetail").hasClass("show")) {
+            isrun2=true;
+            $(".second").show().addClass("animated fadeInUp1");
+        }else if(scrollTop >= 200&&scrollTop<300&&!isrun3&&!$(".third").next(".showdetail").hasClass("show")) {
+            isrun3=true;
+            $(".third").show().addClass("animated fadeInUp1");
+        }else if(scrollTop>=300&&!isrun4&&!$(".last").next(".showdetail").hasClass("show")) {
+            isrun4=true;
+            $(".last").show().addClass("animated fadeInUp1");
+            
+        }
+    }
+   }
+    console.log(th,bodyh,ah);
+    
+    
 }
+var imglist=["sa","sb","ra","equipment"]
     $(".container a").click(function(){
+        if(document.documentElement.offsetWidth>1010){}else{
+            $("#m_img").attr("src","img/m_"+imglist[$(this).index(".container a")]+".png")
+        }
+        console.log()
         $(this).next(".showdetail").addClass("animated fadeIn");
         $(this).prev().prev("a").css("border-bottom","0");
         $(this).next().next("a").css("border-top","0");
@@ -63,6 +94,9 @@ $(document).ready(function(){
         $(this).next(".showdetail").show().addClass("show");
     })
     $(".showdetail span").click(function(){
+        if(document.documentElement.offsetWidth>1010){}else{
+            $("#m_img").attr("src","img/m_service.png")
+        }
         console.log( $(this).parent(".showdetail").prev("a").prev(".showdetail").prev("a"))
        $(this).parent(".showdetail").prev("a").prev(".showdetail").prev("a").length!=0?$(this).parent(".showdetail").prev("a").prev(".showdetail").prev("a").css("border-bottom","solid white 2.5px"):"";
        $(this).parent(".showdetail").next("a").length!=0?$(this).parent(".showdetail").next("a").css("border-top","solid white 2.5px"):"";

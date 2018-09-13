@@ -81,7 +81,7 @@ $(document).ready(function(){
                         $("#shb.mixer h1").addClass("animated fadeInUp3");
                         $("#shb .detail").addClass("animated fadeInUp4");
                     }
-                    if(scrollTop>=900){
+                    if(scrollTop>=850){
                         $("#sign_lsy").attr("src","img/m_lsy.png")
                         console.log(1)
                         $("#w_lsy,#sign_lsy").show();

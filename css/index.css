@@ -21,24 +21,25 @@ body{
 body,html{
     margin: 0;
     padding: 0;
-}
-.container{
     
-    box-sizing: border-box;
-    width: 100%;
-    height: 100vh;
-    border: 5px solid white;
-    position: absolute;
-    overflow: hidden;
-    zoom: 1;
-
 }
+
 #home{
            position: relative;
 }
 
 
 @media screen and (min-width: 1010px) {
+    .container{
+    
+        box-sizing: border-box;
+        width: 100%;
+        height: 100vh;
+        border: 5px solid white;
+        position: absolute;
+        overflow: hidden;
+    
+    }   
     #w_lsy{
         display: none;
     }
@@ -47,6 +48,7 @@ body,html{
         position: fixed;
         top: 155px;
         right: -5px;
+        z-index: -1;
     }
     .service.layouts{
       }
@@ -414,6 +416,10 @@ nav .active>a,nav a:hover{
     }
 }
 @media screen and (max-width:1010px){
+    body{
+        overflow: hidden;
+        max-height: 100vh;
+    }
    /* 导航通用 */
 nav .active>a,nav a:hover{
     background-color: white;
@@ -540,10 +546,36 @@ nav .active>a,nav a:hover{
     }
     /* aboutus */
     .layouts{
-        position: relative;
+        /* position: relative;
     min-height: 100vh;
     height: auto;
+    overflow-x: hidden; */
+    position: relative;
+    min-height: 100vh;
     overflow-x: hidden;
+    position: absolute;
+	top: 0.1px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	-webkit-box-flex: 1;    
+    }
+    .container{
+        
+    
+            box-sizing: border-box;
+            width: 100%;
+            height: 100vh;
+            border: 5px solid white;
+            position: absolute;
+            
+        
+        
+        overflow: auto;
+        overflow-x: hidden;
+        height: auto;
     }
     .container.layouts>img{
         height: 100vh;
@@ -584,7 +616,7 @@ nav .active>a,nav a:hover{
         /* float: left; */
         width: 100%;
         background-color: rgba(0,0,0,0.75);
-        margin-top: 70px;
+        padding-top: 70px;
         font-family: '微软雅黑';
         font-size: 1rem;
     }
@@ -724,6 +756,8 @@ nav .active>a,nav a:hover{
 }
 #gallery{
     padding:5% 5%;
+    padding-top: calc(70px + 5%);
+
     width: 90%;
 }
 #showphoto {

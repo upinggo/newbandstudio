@@ -38,7 +38,8 @@ $(document).ready(function(){
     if(document.documentElement.offsetWidth>1010){
         
     }else{
-        $(".text").css("min-height",document.documentElement.offsetHeight-48-105+'px')
+        $(".text").css("min-height",document.documentElement.offsetHeight-48-105+'px');
+        
     }
     var deg=0;
     $("#mobile_icon").click(function(){

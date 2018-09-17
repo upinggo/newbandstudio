@@ -64,13 +64,14 @@ $(document).ready(function(){
                 }
             }else{
                 $(".text").css("min-height",document.documentElement.offsetHeight-48-105+'px')
-                document.onscroll=function(){
-                    var scrollTop=document.body.scrollTop+document.documentElement.scrollTop;
-                    console.log(scrollTop);
+                $("#container")[0].onscroll=function(){
+                    var scrollTop=this.scrollTop;
+                    console.log(scrollTop)
                     if(scrollTop<=200){
                         $("#m_img").attr("src","img/m_aboutus.png")
                     }
-                    if(scrollTop > 200) {
+                    if(scrollTop > 190) {
+                        
                         $("#m_img").attr("src","img/m_meet.png")
                         $("#p_shb").css("visibility","visible")
                         $("#sign_shb").show();
@@ -83,7 +84,6 @@ $(document).ready(function(){
                     }
                     if(scrollTop>=850){
                         $("#sign_lsy").attr("src","img/m_lsy.png")
-                        console.log(1)
                         $("#w_lsy,#sign_lsy").show();
                         $("#w_lsy,#sign_lsy").addClass("animated fadeInUpBig");
                         $("#lsy.mixer").show();
@@ -103,7 +103,7 @@ $(document).ready(function(){
         $("#mobile_nav .title a").css('line-height',(document.documentElement.offsetHeight-110)/5+'px');
         if(deg/90%2==0){
             $('#mobile_nav').show();
-            console.log(1)
+            
            
         }else{
             $('#mobile_nav').hide();

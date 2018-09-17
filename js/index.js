@@ -134,6 +134,12 @@ window.onload=function(){
     
 }
 $(document).ready(function(){
+    if(document.documentElement.offsetWidth>1010){
+        
+    }else{
+        document.getElementById("container").style.height="100vh";
+        document.getElementById("container").style.overflowY="scroll";
+    }
     
     var deg=0;
     $("#mobile_icon").click(function(){

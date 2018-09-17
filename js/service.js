@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    
     var isrun1,isrun2,isrun3,isrun4=false;
     $(".container a").hide();
     if(document.documentElement.offsetWidth>1010){
@@ -31,9 +32,9 @@ $(document).ready(function(){
        $(".first").show();
        isrun1=true;
     var ah=$(".first")[0].offsetHeight;
-    document.onscroll=function(){
-        var scrollTop=document.body.scrollTop+document.documentElement.scrollTop;
-        // console.log(!$(".first").next(".showdetail").hasClass("show"),document.documentElement.scrollTop);
+    $("#container")[0].onscroll=function(){
+        var scrollTop=this.scrollTop;
+        
         console.log(scrollTop)
          if(scrollTop >= 0&&scrollTop<100&&!isrun2&&!$(".second").next(".showdetail").hasClass("show")) {
             isrun2=true;
